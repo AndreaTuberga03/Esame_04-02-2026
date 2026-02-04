@@ -75,6 +75,7 @@ class DAO:
     def get_all_weighted_neigh(year, shape):
         conn = DBConnect.get_connection()
 
+
         result = []
         cursor = conn.cursor(dictionary=True)
         query = """ SELECT LEAST(n.state1, n.state2)    AS st1,
