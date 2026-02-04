@@ -40,6 +40,9 @@ class View:
         self.txt_title = ft.Text("Gestione Artisti", size=30, weight=ft.FontWeight.BOLD)
 
         self.dd_ruolo = ft.Dropdown(label="Seleziona ruolo artista", width=250)
+        #self._controller.populate_dd()
+
+        #self._controller.populate_dd_category()
 
         self.dd_iniziale = ft.Dropdown(label="Artista Iniziale", width=250, disabled=True)
 
@@ -67,6 +70,7 @@ class View:
         )
 
         self._page.scroll = "adaptive"
+        self._controller.popola_dd()
         self._page.update()
 
     def _cambia_tema(self, e):
